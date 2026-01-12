@@ -1,0 +1,46 @@
+
+#include <iostream>
+using namespace std;
+int arr[50] ;
+int size_of_array = 0;
+void PrintArray(){
+    for(int i = 0 ; i<size_of_array ; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+void InsertIntoArray(int data, int position){
+    for(int i = size_of_array -1 ; i>= position ; i--){
+        arr[i+1] = arr[i];
+    }
+    arr[position] = data;
+    size_of_array++;
+}
+void DeleteFromArray(int position){
+    for(int i = position; i< size_of_array-1;i++){
+        arr[i] = arr[i+1];
+    }
+    size_of_array--;
+
+}
+
+void push (int x){
+InsertIntoArray(x ,size_of_array);
+}
+void pop (){
+DeleteFromArray(0);
+}
+int main(){
+
+  push(150) ;
+    PrintArray();
+  push(106) ;
+    PrintArray();
+   pop();
+   PrintArray();
+  push(108) ;
+  push(190) ;
+  push(300) ;
+  pop();
+  PrintArray();
+}
