@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char word[50]; 
+    char b = 'z'; 
+    printf("Enter a string: ");
+    fgets(word, sizeof(word), stdin);
+
+    
+    word[strcspn(word, "\n")] = 0;
+
+    
+    if (strstr(word, "%f") != NULL && strstr(word, "&") != NULL) {
+        b = 'f';  
+    }
+
+    if (b == 'f') {
+        printf("input & float\n");
+    } else {
+        printf("not a float\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[50];
+    int f = 0;
+
+    printf("Enter the input: ");
+    scanf("%s", str);
+
+    int length = sizeof(str);
+
+
+    int i = 0;
+
+    
+    while (i < length && str[i] == 'b') {
+        i++;
+    }
+
+    
+    if (i < length && str[i] == 'a') {
+        i++;
+        
+        if (i == length) {
+            f = 1; 
+        }
+    }
+
+    if (f == 1) {
+        printf("Valid\n");
+    } else {
+        printf("Invalid\n");
+    }
+
+    return 0;
+}

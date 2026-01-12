@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char word[20];
+    printf("Enter a string: ");
+    gets(word);
+
+    int var = -1;
+    char a = 'z', b = 'z',c='z' ,x = 'z';
+    int length = strlen(word);
+
+
+    for (int i = 0; i < 2; i++) {
+    if (word[i]=='p'){
+       c='p';
+
+    }
+    else if(word[i]=='s'){
+       c='s';
+
+    }
+    else{
+        a='z';
+
+    }
+    }
+    for (int i = 0; i < length; i++) {
+
+        if (word[i] == '%') {
+            var = i + 1;
+            break;
+        } else {
+            x = 'z';
+        }
+    }
+
+
+    if (var != -1) {
+        if (word[var] == 'd') {
+            a = 'd';
+        } else if (word[var] == 's') {
+            a = 's';
+        } else if (word[var] == 'c') {
+            a = 'c';
+        } else if (word[var] == 'f') {
+            a = 'f';
+        } else {
+            a = 'z';
+        }
+    }
+
+
+    for (int i = 0; i < length; i++) {
+        if (word[i] == '&') {
+            b = 'i';
+            break;
+        } else {
+            b = 'o';
+        }
+    }
+
+
+    if (b == 'i'&& c=='s') {
+        printf("input\n");
+    } else if (b == 'o' && c=='p') {
+        printf("output\n");
+    } else {
+        printf("invalid 1\n");
+    }
+
+    if (a == 'd') {
+        printf("int\n");
+    } else if (a == 's') {
+        printf("string\n");
+    } else if (a == 'f') {
+        printf("float\n");
+    } else if (a == 'c') {
+        printf("char\n");
+    } else {
+        printf("invalid 2\n");
+    }
+
+    return 0;
+}
