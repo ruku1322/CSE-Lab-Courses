@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include<string.h>
+using namespace std;
+int main()
+{
+    cout<<"Enter one line code :"<<endl;
+    string str;
+    getline(cin, str);
+    char A;
+    for(int i=0; i < str.size(); i++)
+    {
+        if(str[i]=='(')
+        {
+            if(str[i+1]=='i'){
+
+            if (str[i+2]=='n'){
+             if (str[i+3]=='t'){
+            cout<<"User defined function "<<endl;
+             break;}
+        }}
+         cout<<"Not A User defined function "<<endl;
+    }}
+    return 0;
+}
